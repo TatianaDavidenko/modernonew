@@ -38,6 +38,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: $text;
+  overflow-x: hidden; // чтобы в хедере не появлялся нижний скролл и выпадашки работали
 }
 .container {
   max-width: 1200px;
@@ -55,7 +56,19 @@ body {
     padding: 0px 15px;
   }
 }
-.page-content{
+.angle-right {
+  position: relative;
+  padding-left: 15px;
+  &::before {
+    content: "\f105";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    color: $green;
+    font-size: 14px;
+  }
+}
+.page-content {
   background-color: $grey;
 }
 .title {
@@ -88,7 +101,8 @@ body {
         }
       }
       &:last-child {
-        a, span{
+        a,
+        span {
           color: $bg;
         }
       }

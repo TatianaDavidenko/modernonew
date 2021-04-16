@@ -34,6 +34,13 @@ $(function () {
     $('.icon-th-list').removeClass('active')
   });
 
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').slideToggle(); //показывает существующий класс
+  });
+
+  $('.header__btn-menu').on('click', function () {
+    $('.header__box').toggleClass('active'); // добавляется новый класс актив
+  });
   var mixer = mixitup('.products__inner-box');
 
 });
