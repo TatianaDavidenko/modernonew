@@ -1705,7 +1705,7 @@ button.icon-unsorted {
     background-color: #f1f4f5;
     width: 350px;
     margin-bottom: 30px;
-    &::placeholder{
+    &::placeholder {
       font-size: 15px;
       color: #7a7a7a;
     }
@@ -1718,7 +1718,7 @@ button.icon-unsorted {
     width: 100%;
     resize: none;
     margin-bottom: 23px;
-    &::placeholder{
+    &::placeholder {
       font-size: 15px;
       color: #7a7a7a;
     }
@@ -1736,4 +1736,93 @@ button.icon-unsorted {
   }
 }
 // end contact
+// start settings
+.settings {
+  padding-bottom: 100px;
+}
+.product-one__tabs.settings__tabs {
+  display: flex;
+  .tabs {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+    border: 1px solid #dcdcdc;
+    border-bottom: none;
+    display: block;
+    text-align: left;
+    height: 100%;
+    span {
+      display: block;
+      padding: 17px 17px 17px 50px;
+      border-bottom: 2px solid #dcdcdc;
+      color: #707070;
+      font-size: 14px;
+      @include f500;
+      &.active {
+        border-bottom: 2px solid $green;
+        color: #37474f;
+        &::before {
+          color: $green;
+        }
+      }
+      &::before {
+        left: 24px;
+        color: #444;
+      }
+    }
+  }
+  .tabs .tab + .tab {
+    border-left: none;
+  }
+  .tab_content {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+.page-box {
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+.page-box__title {
+  border-bottom: 1px solid #dedede;
+  padding: 18px 34px;
+  @include f500;
+  color: $bg;
+  font-size: 24px;
+}
+.page-box__content {
+  padding: 30px 35px 80px;
+}
+.settings__line {
+  margin-bottom: 21px;
+  display: flex;
+  // align-items: center;
+  label {
+    color: #444;
+    width: 260px;
+  }
+  input {
+    max-width: 540px;
+    width: 100%;
+    border: 1px solid #dedede;
+    height: 40px;
+    color: $bg;
+    background-color: #f9f9f9;
+    padding: 0px 10px;
+  }
+  select{
+    max-width: 540px;
+    width: 100%;
+    border: 1px solid #dedede;
+    height: 40px;
+    color: $bg;
+    background-color: #f9f9f9;
+    padding: 0px 10px;
+    color: #707070;
+  }
+}
+// end settings
+
 @import "media";
