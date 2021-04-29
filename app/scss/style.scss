@@ -472,6 +472,11 @@
   padding: 110px 0px;
   background-color: $grey;
 }
+.products__wrapper,
+.product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 .products__inner-btn {
   text-align: center;
   margin-bottom: 60px;
@@ -495,8 +500,13 @@
 }
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  margin-left: -30px;
+  justify-content: start;
   flex-wrap: wrap;
+}
+.products .products__item {
+  flex-basis: calc(25% - 30px);
+  margin-left: 30px;
 }
 .products__item {
   max-width: 442px;
@@ -1108,7 +1118,8 @@ button.icon-unsorted {
 }
 .product-page__content {
   .products__item {
-    max-width: 270px;
+    flex-basis: calc(33.333% - 30px);
+    margin-left: 30px;
     background-color: #fff;
     transition: all 0.5s;
   }
@@ -1134,9 +1145,10 @@ button.icon-unsorted {
 }
 .product-page__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  margin-left: -30px;
 }
 .pagination__list {
   li {
@@ -1199,6 +1211,7 @@ button.icon-unsorted {
 }
 .products__item.list {
   max-width: 100%;
+  flex-basis: 100%;
   .products__item-img {
     width: 240px;
     min-height: 100%;
@@ -1252,7 +1265,7 @@ button.icon-unsorted {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0px;
+  padding: 16px;
 }
 .product-one__images {
   max-width: 829px;
@@ -2286,7 +2299,7 @@ button.icon-unsorted {
   align-items: center;
   font-size: 13px;
   color: #444;
-  &:nth-child(odd){
+  &:nth-child(odd) {
     background-color: #f9f9f9;
   }
 }
@@ -2309,7 +2322,6 @@ button.icon-unsorted {
   &.withdrawals__content-paid {
     color: $green;
   }
-  
 }
 // end withdrawals
 
